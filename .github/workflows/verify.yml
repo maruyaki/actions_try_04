@@ -1,0 +1,12 @@
+name: verify
+on: [push]
+
+jobs:
+  cowsay:
+    runs-on: self-hosted
+    container: npalm/cowsay
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: cowsay -f "  who ya gonna call?"
+
